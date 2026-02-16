@@ -1,0 +1,25 @@
+Distributed version of MC for PI using Java socket.
+
+usage on a localhost: 
+One terminal for Master
+One terminal for each Worker
+
+on each server terminal (Worker):
+make
+java WorkerSocket <port>
+
+on client terminal (Master):
+make
+make run
+
+Explications persos :
+
+Avec les socket, on commence par lancer un ou plusieurs worker qui servent de serveur grâce à la commande :
+java .\WorkerSocket.java 25545
+
+25545 un des ports prédéfini.
+Puis lancer le master avec
+java .\MasterSocket.java
+
+Puis compléter avec les informations demandés (nombre de worker, leurs ports)
+On obtient l’estimation, l’erreur, le temps…
